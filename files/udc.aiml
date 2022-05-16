@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  
+
+<category>
+    <pattern> \start</pattern>
+    <template>Benvenuto/a nel servizio CHATBOT riservato ai clienti.
+Sono disponibili i seguenti servizi: 
+<ul>
+    <li>Menù (\menu)</li>
+    <li>Effettua ordinazione d'asporto (\order)
+</li>
+        <li>Prenotazione tavoli (\reservation)</li>
+    <li>Contattaci (\info)</li>
+</ul></template>
+<ul>
+    <li>Ordinazione (\order)</li>
+    <li>Contattaci (\info)</li>
+    <li>Supporto (\help)</li>
+</ul>
+
+</category>
+
+<category>
+    <pattern>\menu</pattern>
+    <template>Di seguito è riportato il nostro menù:
+<carousel>
+    <card>
+        <title>Menù</title>
+        <subtitle></subtitle>
+        <button>
+            <text>Pizza</text>
+            <postback>link1</postback>
+        </button>        <button>
+            <text>Hamburger</text>
+            <postback>link2</postback>
+        </button>        <button>
+            <text>Dolci</text>
+            <postback>link3</postback>
+        </button>        <button>
+        <text>Bevande</text>
+        <postback>link4</postback>
+        
+        <button>
+            <text>Ritorta all'indice iniziale</text>
+            <postback>\start</postback>
+        </button>
+    </button>
+    
+    
+</card>
+</carousel>
+</template>
+</category>
+
+<category>
+    <pattern>link1</pattern>
+    <template>
+        MARGHERITA (pomodoro - mozzarella) € 5.00<br></br> <br></br>NAPOLETANA (pomodoro - mozzarella - acciughe - origano)€ 6.00 <br></br><br></br>FUNGHI (pomodoro - mozzarella - funghi trifolati) € 6.00 <br></br><br></br>CARCIOFINI (pomodoro - mozzarella - carciofini) € 6.00 <br></br><br></br>CIPOLLA (pomodoro - mozzarella - cipolla) € 6.00 <br></br><br></br>PEPERONI (pomodoro - mozzarella - peperoni) € 6.00 <br></br><br></br>MELANZANE (pomodoro - mozzarella - melanzane) € 7.00 <br></br><br></br>FUNGHI FRESCHI (pomodoro - mozzarella - funghi freschi champignon) € 6.50 <br></br><br></br>ZUCCHINE (pomodoro - mozzarella - zucchine) € 6.00 <br></br><br></br>SALSICCIA (pomodoro - mozzarella - salsiccia) € 7.00 <br></br><br></br>SALAME PICCANTE (pomodoro - mozzarella - salame piccante) € 7.00 <br></br><br></br>PANCETTA AFFUMICATA (pomodoro - mozzarella - pancetta affumicata) € 6.50 
+        <button>
+            <text>Ritorna al menù</text>
+            <postback>\menu</postback>
+        </button>
+    </template>
+</category>
+<category>
+    <pattern>link2</pattern>
+    <template>
+        
+ 
+
+CHEESY:
+
+CARNE DI MANZO, KETCHUP, CHEDDAR
+
+€7.00
+
+<br></br><br></br>
+
+CHEESY DOPPIO:
+
+CARNE DI MANZO (X2), KETCHUP, CHEDDAR
+
+€9.00
+
+<br></br><br></br>
+
+CARBONARA BURGER:
+
+CARNE DI MANZO, CREMA ALL'UOVO, BACON, SCAGLIE DI PECORINO ROMANO
+
+€11.00
+
+<br></br><br></br>
+
+PARMIGIANA:
+
+CARNE DI MANZO (X2), SALSA DI DATTERINO, MELANZANE FRITTE, BUFALA, SCAGLIE DI GRANA
+
+€12.00
+
+<br></br><br></br>
+
+CONTADINA:
+
+CARNE DI MANZO, FONTAL, POMODORINI CARAMELLATI, AVOCADO A FETTE, SPINACINO
+
+€12.00
+
+<br></br><br></br>
+
+AMERICANO:
+
+MANZO ALLA NEWYORKESE, CREMA DI CHEDDAR CON BACON, CIPOLLA E POMODORO, LATTUGA ICEBERG (PANE MULTICEREALE)
+
+€10.00
+
+<br></br><br></br>
+
+RAFFINATO:
+
+CARNE DI MANZO, CIPOLLA IN AGRODOLCE CON MIRTILLI, UVETTA E PINOLI, PATATE LESSE E SPINACINO FRESCO
+
+€9.00 
+
+<br></br><br></br>
+
+AMERICANO 2.0:
+
+CARNE DI MANZO (X2) CREMA DI CHEDDAR CON BACON, CIPOLLA E POMODORO, LATTUGA ICEBERG
+
+€9.50
+
+<br></br><br></br>
+    
+AGRODOLCE:
+
+CARNE DI MANZO (X2) BRIE PANATO, SENAPE, CIPOLLA CARAMELLATA NEL MIELE, POMODORINI CANDITI
+
+€9.50
+
+<br></br><br></br>
+
+BUFFALO:
+
+CARNE DI MANZO (X2) BUFALA, PESTO, POMODORINI CANDITI E BASILICO
+
+€10.00
+
+<br></br><br></br>
+POLLETTO:
+
+HAMBURGER DI POLLO, AVOCADO, GAUDA, MAIONESE SPEZIATA E SPINACINO
+
+€10.00
+<button>
+    <text>Ritorna al menù</text>
+    <postback>\menu</postback>
+</button>
+    </template>
+</category>
+<category>
+    <pattern>link3</pattern>
+    <template>
+        TIRAMISU' €7.00 <br></br>
+        PROFITEROLES €9.00 <br></br>
+        CHEESE CAKE ALLE FRAGOLE €8.50 <br></br>
+        SORBETTO AL LIMONE €4.50 <br></br>
+        CROSTATA DI RICOTTA €8.00 <br></br>
+        TORRONE €9.00 <br></br>
+        <button>
+            <text>Ritorna al menù</text>
+            <postback>\menu</postback>
+        </button>
+    </template>
+</category>
+<category>
+    <pattern>link4</pattern>
+    <template>
+        
+San Benedetto 1 l. € 3.00 <br></br><br></br>
+Coca-cola 33 cl.	€ 3.00<br></br><br></br>
+Coca-cola 1 l.	    € 7.00<br></br><br></br>
+Coca-cola zero 33 cl.	€ 3.00<br></br><br></br>
+Fanta 33 cl.	€ 3.00<br></br><br></br>
+Lemonsoda 20 cl.	€ 2.50<br></br><br></br>
+Schweppes Tonica 18 cl.	€ 2.50<br></br><br></br>
+Thè limone 33 cl.	€ 3.00<br></br><br></br>
+Thè pesca 33 cl.	€ 3.00<br></br><br></br>
+<button>
+    <text>Ritorna al menù</text>
+    <postback>\menu</postback>
+</button>
+
+    </template>
+</category>
+
+<category>
+    <pattern>\info</pattern>
+    <template>La direzione del ristorante è reperibile ai seguenti recapiti:
+<ul>
+    <li>Numero telefonico: +39 333 123 45 67
+</li>
+    <li>Posta elettronica: restaurantname@gmail.com
+</li>
+            <li>Indirizzo: Via Corso San Maurizio 8, Torino</li>
+</ul></template>
+</category>
+<category>
+    <pattern>\order</pattern>
+    <template>Per effettuare l'ordine, chiamare il seguente numero telefonico,  +39 333 765 43 21, o recarsi alla sede più vicina:<ul>
+    <li>Via Corso San Maurizio 8, TO (principale)</li>
+    <li>Via Buniva 2, TO</li>
+    <li>Via Giovanni Giolitti 10, TO </li>
+    <li>Via Franco Alfano 5, TO</li>
+</ul></template>
+</category>
+<category>
+    <pattern>\reservation</pattern>
+    <template>Per prenotazione tavoli, chiamare il seguente numero telefonico: +39 333 765 43 21.</template>
+</category>
+
+<category>
+	<pattern>\BEVANDE</pattern>
+	<template>Non ho alcuna risposta a questa domanda</template>
+</category>
+
+<category>
+	<pattern> </pattern>
+	<that>NON HO ALCUNA RISPOSTA A QUESTA DOMANDA</that>
+	<template>non esiste</template>
+</category>
+
+<category>
+	<pattern> </pattern>
+	<that>NON HO ALCUNA RISPOSTA A QUESTA DOMANDA</that>
+	<template>non esiste</template>
+</category>
+
+</aiml>
